@@ -1,7 +1,8 @@
 import express from "express";
 import axios from 'axios';
 import fs from 'fs';
-import fuzzyset from 'fuzzyset';
+import fuzzyset from 'fuzzyset';  // for removing the problem of name similarities
+// like indore and indore junction it can find partial match with best accuracy
 import OpenAI from 'openai';
 const app = express();
 app.use(express.urlencoded({
